@@ -24,6 +24,6 @@ jobs:
             inlineScript: |
               az deployment group create \
               --name AzureDeployDeployment \
-              --resource-group AzureChallengeGitHubActionsRG \
-              --template-file armtemplates/azuredeploy.json 
+              -g AzureChallengeGitHubActionsRG \
+              --template-file ./armtemplates/azuredeploy.json 
 
