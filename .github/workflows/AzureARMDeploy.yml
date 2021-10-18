@@ -5,7 +5,6 @@ env:
   AZURE_FUNCTIONAPP_PACKAGE_PATH: 'GitHubActionsARMDeploy'
 
 on: [push]
-  branches: [main]
 
 workflow-dispatch:
 
