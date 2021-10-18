@@ -22,8 +22,5 @@ jobs:
           with:
             azcliversion: 2.0.72
             inlineScript: |
-              az deployment group create \
-              --name AzureDeployDeployment \
-              -g AzureChallengeGitHubActionsRG \
-              --template-file ./armtemplates/azuredeploy.json 
+              az deployment group create -g AzureChallengeGitHubActionsRG --template-file ../armtemplates/azuredeploy.json
 
