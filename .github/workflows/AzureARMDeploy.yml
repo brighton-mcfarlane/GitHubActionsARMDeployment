@@ -18,7 +18,6 @@ jobs:
         - name: Deploy ARM Template
           uses: azure/CLI@v1
           with:
-            azcliversion: 2.0.72
             inlineScript: |
-              az deployment group create --resource-group AzureChallengeGitHubActionsRG --template-file GitHubActionsARMDeploy/azuredeploy.json --parameters appName="AzureDeployDeployment" 
+              az deployment group create --resource-group AzureChallengeGitHubActionsRG --template-file azuredeploy.json --parameters appName="AzureDeployDeployment" 
 
