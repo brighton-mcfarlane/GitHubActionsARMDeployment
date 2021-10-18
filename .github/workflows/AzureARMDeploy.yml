@@ -1,7 +1,7 @@
 on: [push]
-  branches: [test-branch]
+  branches: [main]
 
-name: AzureARMDeploy
+name: Workflow 1
 
 jobs:
 
