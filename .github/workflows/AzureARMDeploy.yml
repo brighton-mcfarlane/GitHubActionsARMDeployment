@@ -1,10 +1,6 @@
-name: AzureARMDeploy
-
-env:
-  DOTNET_VERSION: 3.1.x
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: 'GitHubActionsARMDeploy'
-
 on: [push]
+
+name: AzureARMDeploy
 
 workflow-dispatch:
 
