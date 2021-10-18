@@ -1,4 +1,5 @@
 on: [push]
+  branches: [test-branch]
 
 name: AzureARMDeploy
 
@@ -20,4 +21,12 @@ jobs:
           with:
             inlineScript: |
               az deployment group create --resource-group AzureChallengeGitHubActionsRG --template-file azuredeploy.json --parameters appName="AzureDeployDeployment" 
-
+        
+        - name: Trigger next workflow
+          if: success()
+          uses: brighton-mcfarlane/repository-dispatch@v1
+          with:
+            token: ${{ secrets.REPO_GHA_PAT }}
+            repository: ${{ github.repository }}
+            event-type: trigger-workflow-2
+            client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
