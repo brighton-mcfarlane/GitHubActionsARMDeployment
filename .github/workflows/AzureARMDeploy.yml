@@ -20,5 +20,5 @@ jobs:
           with:
             azcliversion: 2.0.72
             inlineScript: |
-              az deployment group create --resource-group AzureChallengeGitHubActionsRG --name AzureDeployDeployment --template-file GitHubActionsARMDeployment\armtemplates\azuredeploy.json 
+              az deployment group create --resource-group AzureChallengeGitHubActionsRG --template-file GitHubActionsARMDeploy/azuredeploy.json --parameters appName="AzureDeployDeployment" 
 
